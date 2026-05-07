@@ -18,7 +18,10 @@ const dmSans = DM_Sans({
   display: "swap",
 })
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Rika Nail Salon — Premium Nail Art & Spa in Brooklyn, NY",
     template: "%s | Rika Nail Salon",
@@ -55,7 +58,7 @@ const localBusinessSchema = {
   description: business.description,
   image: business.logoPath,
   logo: business.logoPath,
-  url: "/",
+  url: siteUrl,
   telephone: business.phone,
   address: {
     "@type": "PostalAddress",
