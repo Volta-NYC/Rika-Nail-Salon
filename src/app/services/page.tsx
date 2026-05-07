@@ -42,7 +42,7 @@ export default function ServicesPage() {
             href={business.vagaroUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-cream transition hover:bg-clay"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/55 bg-gold px-5 py-3 text-sm font-semibold text-ink transition hover:bg-blush"
           >
             <CalendarDays size={17} aria-hidden="true" />
             Book Now

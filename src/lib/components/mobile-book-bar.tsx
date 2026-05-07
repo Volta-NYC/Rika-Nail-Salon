@@ -8,7 +8,7 @@ export function MobileBookBar() {
         href={business.vagaroUrl}
         target="_blank"
         rel="noreferrer"
-        className="flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-cream"
+        className="flex items-center justify-center gap-2 rounded-full border border-gold/55 bg-gold px-5 py-3 text-sm font-semibold text-ink shadow-[0_12px_34px_rgba(201,169,110,0.24)]"
       >
         <CalendarDays size={17} aria-hidden="true" />
         Book Now

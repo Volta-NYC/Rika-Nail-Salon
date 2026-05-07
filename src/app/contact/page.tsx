@@ -67,7 +67,7 @@ export default function ContactPage() {
               href={business.vagaroUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-cream transition hover:bg-clay"
+              className="mt-7 inline-flex items-center justify-center gap-2 rounded-full border border-gold/55 bg-gold px-6 py-3 text-sm font-semibold text-ink transition hover:bg-blush"
             >
               <CalendarDays size={17} aria-hidden="true" />
               Book an Appointment

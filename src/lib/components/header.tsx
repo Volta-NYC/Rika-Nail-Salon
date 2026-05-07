@@ -70,7 +70,7 @@ export function Header() {
             href={business.vagaroUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-cream transition hover:bg-clay focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-cream"
+            className="inline-flex items-center gap-2 rounded-full border border-gold/55 bg-gold px-5 py-3 text-sm font-semibold text-ink shadow-[0_12px_34px_rgba(201,169,110,0.24)] transition hover:bg-blush focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-cream"
           >
             <CalendarDays size={17} aria-hidden="true" />
             Book Now
@@ -106,7 +106,7 @@ export function Header() {
             href={business.vagaroUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-cream"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold/55 bg-gold px-5 py-3 text-sm font-semibold text-ink"
           >
             <CalendarDays size={17} aria-hidden="true" />
             Book Now
