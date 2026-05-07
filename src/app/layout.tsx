@@ -1,10 +1,96 @@
+import type { Metadata } from "next"
+import { DM_Sans, Playfair_Display } from "next/font/google"
 import "./globals.css"
-import Navbar from "@/lib/components/navbar"
-import Footer from "@/lib/components/footer"
+import { Header } from "@/lib/components/header"
+import { Footer } from "@/lib/components/footer"
+import { MobileBookBar } from "@/lib/components/mobile-book-bar"
+import { business } from "@data/business"
 
-export const metadata = {
-  title: "Business Name",
-  description: "Short description of the business."
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+})
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+})
+
+export const metadata: Metadata = {
+  title: {
+    default: "Rika Nail Salon — Premium Nail Art & Spa in Brooklyn, NY",
+    template: "%s | Rika Nail Salon",
+  },
+  description: business.description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Rika Nail Salon — Premium Nail Art & Spa in Brooklyn, NY",
+    description: business.description,
+    type: "website",
+    images: [
+      {
+        url: "/images/gallery/photo-29.png",
+        width: 1200,
+        height: 900,
+        alt: "Rika Nail Salon nail art",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rika Nail Salon — Premium Nail Art & Spa in Brooklyn, NY",
+    description: business.description,
+    images: ["/images/gallery/photo-29.png"],
+  },
+}
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "NailSalon",
+  name: business.name,
+  description: business.description,
+  image: business.logoPath,
+  logo: business.logoPath,
+  url: "/",
+  telephone: business.phone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: business.address.street,
+    addressLocality: business.address.city,
+    addressRegion: business.address.state,
+    postalCode: business.address.postalCode,
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: business.geo.latitude,
+    longitude: business.geo.longitude,
+  },
+  paymentAccepted: business.paymentMethods.join(", "),
+  amenityFeature: business.amenities.map((amenity) => ({
+    "@type": "LocationFeatureSpecification",
+    name: amenity,
+    value: true,
+  })),
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "10:30",
+      closes: "19:30",
+    },
+    ...["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"].map((day) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: day,
+      opens: "10:00",
+      closes: "20:00",
+    })),
+  ],
+  sameAs: [business.instagramUrl, business.vagaroUrl],
 }
 
 export default function RootLayout({
@@ -14,12 +100,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-1 max-w-6xl mx-auto px-6 py-12">
-          {children}
-        </main>
+      <body className={`${playfair.variable} ${dmSans.variable} min-h-screen antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <Header />
+        <main>{children}</main>
         <Footer />
+        <MobileBookBar />
       </body>
     </html>
   )
