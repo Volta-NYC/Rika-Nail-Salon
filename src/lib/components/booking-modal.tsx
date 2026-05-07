@@ -118,8 +118,8 @@ export function BookingModal({ booking, onClose }: BookingModalProps) {
       aria-modal="true"
       aria-labelledby="booking-modal-title"
     >
-      <div className="max-h-[92svh] w-full overflow-hidden rounded-t-lg bg-cream shadow-[0_30px_90px_rgba(0,0,0,0.28)] sm:max-w-3xl sm:rounded-lg">
-        <div className="flex items-start justify-between gap-5 border-b border-ink/10 px-5 py-5 sm:px-7">
+      <div className="flex max-h-[calc(100svh-1rem)] w-full flex-col overflow-hidden rounded-t-lg bg-cream shadow-[0_30px_90px_rgba(0,0,0,0.28)] sm:max-h-[calc(100svh-2.5rem)] sm:max-w-3xl sm:rounded-lg">
+        <div className="shrink-0 flex items-start justify-between gap-5 border-b border-ink/10 px-5 py-5 sm:px-7">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-clay">
               {categoryName}
@@ -139,7 +139,7 @@ export function BookingModal({ booking, onClose }: BookingModalProps) {
           </button>
         </div>
 
-        <div className="max-h-[calc(92svh-11rem)] overflow-y-auto px-5 py-5 sm:px-7">
+        <div className="min-h-0 flex-1 overflow-y-auto px-5 py-5 sm:px-7">
           {service.description ? (
             <p className="mb-6 text-sm leading-7 text-ink/62">{service.description}</p>
           ) : null}
@@ -228,7 +228,7 @@ export function BookingModal({ booking, onClose }: BookingModalProps) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 border-t border-ink/10 bg-ivory px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+        <div className="shrink-0 flex flex-col gap-3 border-t border-ink/10 bg-ivory px-5 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-4 sm:flex-row sm:items-center sm:justify-between sm:px-7 sm:pb-4">
           <p className="text-sm text-ink/58">
             Next: choose a professional and time.
           </p>
