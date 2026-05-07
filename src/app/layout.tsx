@@ -27,6 +27,16 @@ export const metadata: Metadata = {
     template: "%s | Rika Nail Salon",
   },
   description: business.description,
+  icons: {
+    icon: [
+      {
+        url: business.logoPath,
+        type: "image/png",
+      },
+    ],
+    shortcut: business.logoPath,
+    apple: business.logoPath,
+  },
   alternates: {
     canonical: "/",
   },
