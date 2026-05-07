@@ -82,7 +82,7 @@ export function ServicesAccordion({ categories }: { categories: ServiceCategory[
                       </p>
                     ) : (
                       <p className="mt-2 text-sm leading-7 text-ink/45">
-                        Available for booking at Rika Nail Salon.
+                        Description not listed.
                       </p>
                     )}
                   </div>
