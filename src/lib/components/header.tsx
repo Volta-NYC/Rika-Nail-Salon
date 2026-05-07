@@ -33,7 +33,7 @@ export function Header() {
               alt="Rika Nail Salon logo"
               fill
               sizes="48px"
-              className="scale-[1.75] object-cover"
+              className="scale-[1.35] object-cover"
               priority
             />
           </span>
