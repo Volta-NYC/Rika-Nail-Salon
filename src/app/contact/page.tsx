@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { AtSign, CalendarDays, MapPin, Phone } from "lucide-react"
 import { business } from "@data/business"
 import { ContactForm } from "@/lib/components/contact-form"
@@ -63,15 +64,13 @@ export default function ContactPage() {
                 <span>{business.instagram}</span>
               </a>
             </div>
-            <a
-              href={business.vagaroUrl}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              href={business.bookingPath}
               className="mt-7 inline-flex items-center justify-center gap-2 rounded-full border border-gold/55 bg-gold px-6 py-3 text-sm font-semibold text-ink transition hover:bg-blush"
             >
               <CalendarDays size={17} aria-hidden="true" />
               Book an Appointment
-            </a>
+            </Link>
           </Reveal>
         </div>
       </section>

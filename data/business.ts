@@ -34,6 +34,7 @@ export const business = {
   instagram: "@rikanail299",
   instagramUrl: "https://www.instagram.com/rikanail299/",
   vagaroUrl: "https://www.vagaro.com/rikanailsalon",
+  bookingPath: "/book",
   directionsUrl:
     "https://www.google.com/maps/search/?api=1&query=299%20Flatbush%20Ave%2C%20Brooklyn%2C%20NY%2011217",
   description:

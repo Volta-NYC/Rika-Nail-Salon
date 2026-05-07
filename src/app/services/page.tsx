@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { CalendarDays } from "lucide-react"
 import { business } from "@data/business"
 import { serviceCategories } from "@data/services"
@@ -36,17 +37,15 @@ export default function ServicesPage() {
       <div className="sticky top-20 z-30 border-y border-ink/10 bg-ivory/95 px-5 py-3 backdrop-blur sm:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm font-medium text-ink/68">
-            Ready to reserve a time? Booking opens on Vagaro.
+            Ready to reserve a time? Choose a service to open booking options.
           </p>
-          <a
-            href={business.vagaroUrl}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href={business.bookingPath}
             className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/55 bg-gold px-5 py-3 text-sm font-semibold text-ink transition hover:bg-blush"
           >
             <CalendarDays size={17} aria-hidden="true" />
             Book Now
-          </a>
+          </Link>
         </div>
       </div>
 

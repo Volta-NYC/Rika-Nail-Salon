@@ -39,15 +39,13 @@ function Hero() {
             {business.description}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              href={business.vagaroUrl}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              href={business.bookingPath}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-ink transition hover:bg-blush"
             >
               <CalendarDays size={18} aria-hidden="true" />
               Book Now
-            </a>
+            </Link>
             <Link
               href="/gallery"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-cream/40 px-6 py-3 text-sm font-semibold text-cream transition hover:border-gold hover:text-gold"
@@ -162,15 +160,13 @@ export default function HomePage() {
                 A large, bookable team for everyday care and detailed sets.
               </h2>
             </div>
-            <a
-              href={business.vagaroUrl}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              href={business.bookingPath}
               className="inline-flex items-center gap-2 text-sm font-semibold text-ink underline-offset-4 hover:text-clay hover:underline"
             >
-              Book with Vagaro
+              Book with our team
               <MoveRight size={18} aria-hidden="true" />
-            </a>
+            </Link>
           </Reveal>
           <div className="mt-10 flex gap-4 overflow-x-auto pb-4 [scrollbar-width:thin]">
             {staff.map((member) => (

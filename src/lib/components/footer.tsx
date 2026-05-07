@@ -64,14 +64,12 @@ export function Footer() {
               </div>
             ))}
           </dl>
-          <a
-            href={business.vagaroUrl}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href={business.bookingPath}
             className="mt-6 inline-block text-sm font-semibold text-gold underline-offset-4 hover:underline"
           >
-            Powered by Vagaro - Book Online
-          </a>
+            Book Online
+          </Link>
         </div>
       </div>
     </footer>

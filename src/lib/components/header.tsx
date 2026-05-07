@@ -11,6 +11,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/book", label: "Book" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -49,7 +50,8 @@ export function Header() {
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Main navigation">
           {navItems.map((item) => {
-            const active = pathname === item.href
+            const active =
+              item.href === "/" ? pathname === item.href : pathname.startsWith(item.href)
 
             return (
               <Link
@@ -66,15 +68,13 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <a
-            href={business.vagaroUrl}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href={business.bookingPath}
             className="inline-flex items-center gap-2 rounded-full border border-gold/55 bg-gold px-5 py-3 text-sm font-semibold text-ink shadow-[0_12px_34px_rgba(201,169,110,0.24)] transition hover:bg-blush focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-cream"
           >
             <CalendarDays size={17} aria-hidden="true" />
             Book Now
-          </a>
+          </Link>
         </div>
 
         <button
@@ -102,15 +102,14 @@ export function Header() {
               </Link>
             ))}
           </nav>
-          <a
-            href={business.vagaroUrl}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href={business.bookingPath}
+            onClick={() => setOpen(false)}
             className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold/55 bg-gold px-5 py-3 text-sm font-semibold text-ink"
           >
             <CalendarDays size={17} aria-hidden="true" />
             Book Now
-          </a>
+          </Link>
         </div>
       ) : null}
     </header>
