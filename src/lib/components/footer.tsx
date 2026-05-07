@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram, MapPin, Phone } from "lucide-react"
+import { AtSign, MapPin, Phone } from "lucide-react"
 import { business } from "@data/business"
 
 export function Footer() {
@@ -44,7 +44,7 @@ export function Footer() {
               rel="noreferrer"
               className="flex gap-3"
             >
-              <Instagram size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden="true" />
+              <AtSign size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden="true" />
               <span>{business.instagram}</span>
             </a>
           </div>

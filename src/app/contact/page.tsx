@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { CalendarDays, Instagram, MapPin, Phone } from "lucide-react"
+import { AtSign, CalendarDays, MapPin, Phone } from "lucide-react"
 import { business } from "@data/business"
 import { ContactForm } from "@/lib/components/contact-form"
 import { Reveal } from "@/lib/components/reveal"
@@ -59,7 +59,7 @@ export default function ContactPage() {
                 rel="noreferrer"
                 className="flex gap-3"
               >
-                <Instagram size={19} className="mt-0.5 shrink-0 text-clay" aria-hidden="true" />
+                <AtSign size={19} className="mt-0.5 shrink-0 text-clay" aria-hidden="true" />
                 <span>{business.instagram}</span>
               </a>
             </div>

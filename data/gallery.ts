@@ -3,7 +3,7 @@ export type GalleryImage = {
   alt: string
 }
 
-export const galleryImages: GalleryImage[] = Array.from({ length: 38 }, (_, index) => {
+export const galleryImages: GalleryImage[] = Array.from({ length: 35 }, (_, index) => {
   const number = String(index + 1).padStart(2, "0")
 
   return {
