@@ -27,13 +27,13 @@ export function Header() {
           aria-label="Rika Nail Salon home"
           onClick={() => setOpen(false)}
         >
-          <span className="relative grid size-12 place-items-center overflow-hidden rounded-full border border-gold/40 bg-ivory shadow-sm">
+          <span className="relative grid size-12 place-items-center overflow-hidden rounded-full border border-gold/40 bg-ink shadow-sm">
             <Image
               src={business.logoPath}
               alt="Rika Nail Salon logo"
               fill
               sizes="48px"
-              className="object-contain p-2"
+              className="scale-[1.75] object-cover"
               priority
             />
           </span>
