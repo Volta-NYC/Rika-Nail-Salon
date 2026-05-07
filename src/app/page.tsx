@@ -27,14 +27,15 @@ function Hero() {
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(26,26,26,0.78),rgba(26,26,26,0.48)_45%,rgba(26,26,26,0.18))]" />
       <div className="relative mx-auto flex min-h-[76svh] max-w-7xl items-end px-5 pb-16 pt-24 sm:px-8 md:pb-20">
-        <Reveal className="max-w-3xl">
+        <Reveal className="w-full min-w-0 max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
             Brooklyn, New York
           </p>
           <h1 className="mt-5 max-w-3xl font-serif-display text-6xl leading-[0.95] tracking-normal sm:text-7xl lg:text-8xl">
-            Rika Nail Salon
+            <span className="block sm:inline">Rika</span>{" "}
+            <span className="block sm:inline">Nail Salon</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-cream/82 sm:text-lg">
+          <p className="mt-6 max-w-xl text-base leading-8 text-cream/82 sm:text-lg">
             {business.description}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
