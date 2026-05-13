@@ -72,6 +72,16 @@ export function Footer() {
           </Link>
         </div>
       </div>
+      <div className="mx-auto max-w-7xl px-5 pb-8 text-sm text-cream/60 sm:px-8">
+        <a
+          href="https://voltanyc.org/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-[#82c341] no-underline"
+        >
+          Made by Volta
+        </a>
+      </div>
     </footer>
   )
 }
